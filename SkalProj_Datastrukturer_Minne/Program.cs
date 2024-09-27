@@ -96,10 +96,8 @@ namespace SkalProj_Datastrukturer_Minne
              * Behöver man kunna lägga till saker i listan behöver man använda list.
              * 
              */
-
             Console.WriteLine("\nEnter input '+' or '-' followed by name/item to add or remove from the List");
             Console.WriteLine("Enter input '0' to exit.");
-            
             List<string> theList = new List<string>();
             bool looping = true;
             char nav = ' ';
@@ -118,9 +116,7 @@ namespace SkalProj_Datastrukturer_Minne
                     Console.WriteLine("Please enter some input!");
                     break;
                 }
-                
                 value = input.Substring(1);
-
                 switch (nav)
                 {
                     case '+':
@@ -150,10 +146,7 @@ namespace SkalProj_Datastrukturer_Minne
                         Console.WriteLine("Please enter some valid input (+, -)");
                         break;
                 }
-
-
             } while (looping);
-
         }
 
         /// <summary>
@@ -167,11 +160,9 @@ namespace SkalProj_Datastrukturer_Minne
              * Make sure to look at the queue after Enqueueing and Dequeueing to see how it behaves
             */
             Queue<string> queue = new Queue<string>();
-
             Console.WriteLine("\nEnter input '+' followed by name/item to add to the Queue");
             Console.WriteLine("Enter input '-' to dequeue");
             Console.WriteLine("Enter input '0' to exit.");
-
             bool looping = true;
             char nav = ' ';
             string input = " ";
@@ -190,7 +181,6 @@ namespace SkalProj_Datastrukturer_Minne
                     break;
                 }
                 value = input.Substring(1);
-
                 switch (nav)
                 {
                     case '+':
@@ -218,10 +208,7 @@ namespace SkalProj_Datastrukturer_Minne
                         Console.WriteLine("Please enter some valid input (+, -)");
                         break;
                 }
-
-
             } while (looping);
-
         }
 
         /// <summary>
@@ -235,18 +222,17 @@ namespace SkalProj_Datastrukturer_Minne
              * Make sure to look at the stack after pushing and and poping to see how it behaves
             */
 
-            /* 1. I det här fallet så är det dumt att använda en stack för att den är last in first out vilket inte riktigt är passande här.
+            /* 1. I det här fallet så är det dumt att använda en stack för att den är last in first out vilket är helt tvärtom en queue
+             *  och det är inte passande här.
              * 
              * 
              */
 
             Stack<string> stack = new Stack<string>();
-
             Console.WriteLine("\nEnter input '+' followed by name/item to push to the Stack");
             Console.WriteLine("Enter input '-' to pop");
             Console.WriteLine("Enter input 'R' followed by text to Reverse text from input");
             Console.WriteLine("Enter input '0' to exit.");
-
             bool looping = true;
             char nav = ' ';
             string input = " ";
@@ -265,7 +251,6 @@ namespace SkalProj_Datastrukturer_Minne
                     break;
                 }
                 value = input.Substring(1);
-
                 switch (nav)
                 {
                     case '+':
@@ -280,7 +265,6 @@ namespace SkalProj_Datastrukturer_Minne
                         {
                             break;
                         }
-                        
                         stack.Pop();
                         foreach (string item in stack)
                         {
@@ -303,10 +287,7 @@ namespace SkalProj_Datastrukturer_Minne
                         Console.WriteLine("Please enter some valid input (+, -)");
                         break;
                 }
-
-
             } while (looping);
-
         }
 
         static void CheckParanthesis()
